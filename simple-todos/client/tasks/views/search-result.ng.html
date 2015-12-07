@@ -1,0 +1,26 @@
+<div class="tasks">
+    <!--Sidebar content-->
+
+    <ng-include src="'client/tasks/views/task-details.ng.html'"></ng-include>
+
+    <div class="findList">
+        <div>
+            <div ng-if="name">
+                <table class="table tablehover datatable">
+                    <caption class="captionstyle">{{name}}</caption>
+                    <tbody>
+                    <tr ng-repeat="task in tasks|filter: {name:name} as nameLength">
+                        <td colspan="4">
+                                <show-data></show-data>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
