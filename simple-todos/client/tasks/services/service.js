@@ -40,6 +40,20 @@ angular.module('demoOne').factory('myShareService',function($rootScope){
 
 
         return tasksService;
+    })
+    .factory('myCategoryService',function(){
+
+        var categoryService ={};
+
+        categoryService.addCategory = function(newType){
+            Meteor.call("addCategory",newType);
+        };
+
+        categoryService.updateCategory = function(newType){
+            Meteor.call("updateCategory",newType);
+        }
+
+        return categoryService;
     });
 
 

@@ -161,7 +161,8 @@
 /*查询任务列表*/
 .findList{
     margin: 0;
-    overflow-y: hidden;
+  /*  overflow-y: hidden;*/
+    overflow:auto;
     height:100%;
 }
 
@@ -230,20 +231,21 @@
 a:visited {color:#00FF00;text-decoration:none}
 a:hover {color:#FF00FF;text-decoration:none}
 a:active {color:#0000FF;text-decoration:none}*/
-a.Tlink:link{text-decoration:none;color:#9C9C9C;}
-a.Tlink:visited{text-decoration:none;color:#9C9C9C;}
-a.Tlink:hover{text-decoration:none;color: #9C9C9C; }
-a.Tlink:active{
+a.Tlink:link{text-decoration:none;}
+a.Tlink:visited{text-decoration:none; color:#FF0000;}
+a.Tlink:hover{text-decoration:none; }
+/*a.Tlink:active{
     text-decoration:none;
-    color:#1581B2;
     font-weight: bold;
+    color:#FF0000;
     font-size: 12px;
     padding-left: 5px;
-}
+}*/
 
 .leftFonts{
     padding-left: 15px;
     font-size: 20px;
+    color:  #9C9C9C;
 }
 
 .leftIcon{
@@ -303,7 +305,7 @@ body {
     margin: 0;
     width: 80%;
     height: 100%;
-    overflow-y: auto;
+    overflow-y: hidden;
     float: right;
   /*  background-color: #81BCB8;*/
 }
@@ -318,7 +320,7 @@ body {
     width: 100%;
     height: calc(100% - 80px);
     overflow:auto;
-    background-color: #FAFAFA;
+    background-color: #EFF4F7;
 }
 
 #create{
@@ -343,8 +345,17 @@ table.datatable tr{
     height: 30px;
     margin-top:50px;
     margin-left: 5px;
-    background-color: #FAFAFA;
+    background-color: #EFF4F7;
 
+}
+
+.active {
+    text-decoration:none;
+    font-weight: bold;
+    font-size: 12px;
+    padding-left: 5px;
+    border: 2px solid #0F709D;
+    background-color: #FFFFFF;
 }
 
 

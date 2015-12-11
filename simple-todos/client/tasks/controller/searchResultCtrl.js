@@ -4,7 +4,6 @@
 angular.module('demoOne').controller('SearchResultCtrl',['$scope','$meteor','myTasksService','myShareService',
     function ($scope,$meteor,myTasksService,myShareService) {
 
-
         $scope.$on('taskNameBroadcast',function(){
             $scope.name = myShareService.name;
         });

@@ -18,7 +18,8 @@ angular.module('demoOne').controller('StarTaskListCtrl', ['$scope', '$stateParam
         //slide the edit page
         $scope.isChange = true;
         $scope.edit = function (task) {
-            $scope.$root.$broadcast('edit-event',task);
+           // $scope.$root.$broadcast('edit-event',task);
+            $scope.$broadcast('edit-event',task);
             $scope.isChange = false;
 
         };

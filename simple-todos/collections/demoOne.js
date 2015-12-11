@@ -72,6 +72,28 @@ Meteor.methods({
 
                 }}
         );
+    },
+
+    addCategory: function(newType){
+        Types.insert( {
+                name: newType.name,
+                showIcon: false,
+                createAt: new Date(),
+                owner: Meteor.userId(),          //_id of logged in user
+                username: Meteor.user().username //username of logged in user
+
+            }
+        );
+    },
+
+    updateCategory: function(newType){
+
+        Types.update(
+            {_id:newType._id},
+            {
+                $set: {name:newType.name}
+            }
+        );
     }
 
 });

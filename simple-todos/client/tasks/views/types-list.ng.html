@@ -1,18 +1,18 @@
 <!--Sidebar content-->
     <div>
-        <div class="form-group pointer">
+        <div class="form-group pointer" ui-sref-active="active">
             <span class="glyphicon glyphicon-folder-open leftIcon"></span>
                <a ui-sref="inbox.tasks({param:'Dropbox'})"  class="Tlink"> <span class="leftFonts">Dropbox</span></a>
         </div>
-        <div class="form-group pointer">
+        <div class="form-group pointer" ui-sref-active="active">
             <span class="glyphicon glyphicon-star-empty leftIcon"> </span>
             <a ui-sref="inbox.tasks({param:'Starred'})"  class="Tlink"> <span class="leftFonts">Starred</span></a>
         </div>
-        <div class="form-group pointer">
+        <div class="form-group pointer" ui-sref-active="active">
             <span class="glyphicon glyphicon-list-alt leftIcon"></span>
             <a ui-sref="inbox.totaltasks({param:'unfinished'})"  class="Tlink"><span class="leftFonts">Unfinished</span></a>
         </div>
-        <div class="form-group pointer">
+        <div class="form-group pointer" ui-sref-active="active">
             <span class="glyphicon glyphicon-ok-circle leftIcon"></span>
             <a ui-sref="inbox.totaltasks({param:'done'})" class="Tlink"><span class="leftFonts" >Done</span></a>
         </div>
@@ -20,4 +20,7 @@
         <div ui-view="left"></div>
 
     </div>
+
+
+
 

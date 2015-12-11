@@ -8,21 +8,17 @@ angular.module('demoOne').controller('SearchCtrl',['$scope','$state','myShareSer
     $scope.$on('$stateChangeSuccess',function(){
 
         if($state.current.name == 'inbox.searchTasks'){
-            console.log("execute"+$scope.name);
             myShareService.preForBroadcast($scope.name);
         }
-
     });
 
         $scope.$watch('name',function(){
 
             if($scope.name != null && $state.current.name != 'inbox.searchTasks'){
-                console.log("before enter search");
                 $state.go('inbox.searchTasks');
-                console.log("after enter search");
             }
-                console.log("perform");
-                myShareService.preForBroadcast($scope.name);
+
+            myShareService.preForBroadcast($scope.name);
 
 
         });

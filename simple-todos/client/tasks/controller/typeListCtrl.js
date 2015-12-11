@@ -7,6 +7,12 @@ angular.module('demoOne').controller('TypeListCtrl', ['$scope','$stateParams','$
         $scope.types = $meteor.collection(Types).subscribe("types");
         $scope.tasks = $meteor.collection(Tasks).subscribe("tasks");
 
+        //$scope.testaa = ;
+
+        /*$scope.$watch(function(){return $state.params.param}, function (nVal, oVal) {
+           $scope.testaa = nVal;
+
+        });*/
         /*delete type */
         $scope.ok = function(type){
             myTasksService.removetasksbyType(type._id);
