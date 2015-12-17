@@ -1,9 +1,10 @@
 /**
  * Created by Alvin on 2015/9/29.
  */
-angular.module('demoOne').controller('InputCtrl',['$scope','myTasksService',
-    function ($scope,myTasksService) {
+angular.module('demoOne').controller('InputCtrl',['$scope','myTasksService','$stateParams','$filter','$translate',
+    function ($scope,myTasksService,$stateParams,$filter,$translate) {
 
+        $scope.param = $stateParams.param;
         //judge star state
         $scope.isStar = true;
         $scope.showStar = function(){
@@ -14,10 +15,14 @@ angular.module('demoOne').controller('InputCtrl',['$scope','myTasksService',
         $scope.judgeParam = function(){
             if($scope.param == 'Starred'){
                 $scope.isStar = false;
-                $scope.inputText = 'Dropbox add a star task...';
-            }else{
-                $scope.inputText = 'add a task...';
-            }
+              /*  $scope.$watch(
+                    function() { return  $filter('translate')('100016'); },
+                    function(newval) { $scope.inputText = newval; }
+                );
+*/
+            }/*else{
+                $scope.inputText = $filter('translate')('100007');
+            }*/
         };
         $scope.judgeParam();
 
@@ -29,7 +34,7 @@ angular.module('demoOne').controller('InputCtrl',['$scope','myTasksService',
                     task.category = 'Dropbox';
                     task.isstar = 'Starred';
 
-                }else if($scope.param == 'Dropbox' || $scope.param == 'Unfinished'){
+                }else if($scope.param == 'Dropbox' || $scope.param == 'unfinished'){
 
                     task.category = 'Dropbox';
 

@@ -1,11 +1,17 @@
     <ng-include src="'client/tasks/views/task-details.ng.html'"></ng-include>
 
     <div class="findList">
-        <div class="captionstyle">Unfinished</div>
+        <div class="captionstyle">
+            <div style="width: 100%">
+                {{'100003'|translate}}
+                <title-show style="width: 100%;height: 100%"></title-show>
+            </div>
+        </div>
+
         <div input-text style="margin-top: 10px"></div>
         <div style="margin-top: 10px">
 
-            <span class="conditionstyle" ng-if="shoujianTasks.length">Dropbox</span>
+            <span class="conditionstyle" ng-if="shoujianTasks.length">{{'100001'|translate}}</span>
 
             <div style="margin-top: 5px">
                 <table class="table tablehover datatable">

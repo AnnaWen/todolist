@@ -3,7 +3,20 @@
     <div class="findList">
         <div>
             <table class="table tablehover datatable">
-                <caption class="captionstyle">{{param}} {{ownType.name}}</caption>
+                <caption class="captionstyle">
+                    <div style="width: 100%">
+                        {{ownType.name}}
+                        <span ng-if="param == 'Dropbox'">
+                            {{'100001'|translate}}
+                        </span>
+                        <span ng-if="param == 'Starred'">
+                            {{'100002'|translate}}
+                        </span>
+
+                        <title-show></title-show>
+                    </div>
+
+                </caption>
                 <caption> <input-text></input-text></caption>
                 <tbody>
                 <tr ng-repeat="task in tasks | filter:{condition:'no'}|orderBy:'createAt':true">
@@ -15,7 +28,8 @@
             </table>
         </div>
         <div>
-            <span class="conditionstyle" ng-click="show()">Completed tasks</span>
+
+            <span class="conditionstyle" ng-click="show()"> {{ '100015' | translate }} </span>
             <div ng-class="{true:'noshow',false:'show'}[isShow]" style="margin-top: 5px">
                 <table class="table tablehover datatable">
                     <tbody>

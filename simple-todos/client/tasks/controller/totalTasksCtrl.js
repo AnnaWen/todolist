@@ -7,7 +7,6 @@ angular.module('demoOne').controller('TotalTasksCtrl', ['$scope','$meteor','myTa
         $scope.tasks = $meteor.collection(Tasks).subscribe("tasks");
         $scope.types = $meteor.collection(Types).subscribe("types");
 
-
         /*update task condition is no or done*/
         $scope.finished = function(task){
             myTasksService.finishedTask(task);

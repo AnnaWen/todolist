@@ -3,8 +3,11 @@
         <span class="input-group-addon">
             <span class="glyphicon glyphicon-plus" style="color: #0F7EB5"></span>
         </span>
-        <input type="text" class="form-control input-down" id="name" name="name" placeholder="{{inputText}}" autofocus ng-model="task.name">
+
+        <input type="text"  class="form-control input-down"  name="name" placeholder="{{'100007'|translate}}" autofocus ng-model="task.name">
+
         <span class="glyphicon glyphicon-star-empty star" ng-click="showStar()" ng-class="{true:'oldstar',false:'changeStar'}[isStar]" ng-model="task.isstar" ></span>
+        <span ng-model="task.category" class="hidden"></span>
         <button ng-click="addTask(task,ownType);task='';" class="hidden">add</button>
     </div>
 </form>

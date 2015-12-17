@@ -61,6 +61,14 @@ angular.module('demoOne').directive('confirm',['$modal',function($modal) {
             controller:"ShowDataCtrl"
 
         }
+    }).directive('titleShow',function(){
+        return {
+            restrict:'AE',
+            scope: true,
+            templateUrl:'client/tasks/views/title.ng.html',
+            controller:"TitleCtrl"
+
+        }
     })
   ;
 /*

@@ -5,8 +5,8 @@ Accounts.ui.config({
     passwordSignupFields: "USERNAME_ONLY"
 });
 
-angular.module('demoOne').config(['$urlRouterProvider', '$stateProvider', '$locationProvider',
-    function($urlRouterProvider, $stateProvider, $locationProvider){
+angular.module('demoOne').config(['$urlRouterProvider', '$stateProvider', '$locationProvider','$translateProvider',
+    function($urlRouterProvider, $stateProvider, $locationProvider,$translateProvider){
 
         $urlRouterProvider.otherwise('/task');
         // use the HTML5 History API
@@ -72,6 +72,7 @@ angular.module('demoOne').config(['$urlRouterProvider', '$stateProvider', '$loca
                            return  'client/tasks/views/'+$stateParams.param+'.ng.html';
                         },
                         controller: 'TotalTasksCtrl'
+
                     }
                 }
             });
@@ -115,5 +116,15 @@ angular.module('demoOne').config(['$urlRouterProvider', '$stateProvider', '$loca
             });
         //如果没有路由引擎能匹配当前的导航状态，那它就会默认将路径路由至 tasks
         $urlRouterProvider.otherwise("/tasks");*/
-    }]);
+    }])
+    .config(['$translateProvider',function($translateProvider){
+        var lang = window.localStorage.lang||'cn';
+
+        $translateProvider.preferredLanguage(lang);
+        $translateProvider.useStaticFilesLoader({
+            prefix: 'i18n/lang-',
+            suffix: '.json'
+        });
+    }])
+;
 

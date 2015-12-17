@@ -15,7 +15,7 @@
                         <span class="input-group-addon">
                             <span class="glyphicon glyphicon-calendar Eicon" ></span>
                         </span>
-                        <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="task.endtime" ng-click="open($event)" is-open="opened"  placeholder="set time" min-date="minDate" max-date="'2024-12-30'" datepicker-options="dateOptions" ng-required="true" close-text="Close">
+                        <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="task.endtime" ng-click="open($event)" is-open="opened"  placeholder="{{ '100008' | translate }}" min-date="minDate" max-date="'2024-12-30'" datepicker-options="dateOptions" ng-required="true" close-text="Close">
                         <span class="input-group-addon backIcon" ng-click="clear()">
                            <span class="glyphicon glyphicon-remove"></span>
                         </span>
@@ -26,7 +26,7 @@
             <div class="form-group">
                 <div class="input-group">
                     <span class="input-group-addon"><span class="glyphicon glyphicon-time Eicon"></span></span>
-                    <input type="text" name="endclock"  class="form-control" placeholder="remind me" ng-click="showTimePicker()" value="{{task.endclock | date: 'HH:mm'}}" />
+                    <input type="text" name="endclock"  class="form-control" placeholder="{{ '100009' | translate }}" ng-click="showTimePicker()" value="{{task.endclock | date: 'HH:mm'}}" />
                     <span class="input-group-addon backIcon" ng-click="clearTime()"><span class="glyphicon glyphicon-remove" aria-hidden="false" ></span></span>
                 </div>
                 <div ng-show="isShow" style="padding-left: 90px">
@@ -40,7 +40,7 @@
                 <div class="input-group textnote">
                     <span class="input-group-addon iconUp">
                         <span class="glyphicon glyphicon-pencil Eicon"></span></span>
-                    <textarea rows="18" cols="36" class="form-control" placeholder="Add a note..." name="note" ng-model="task.note"></textarea>
+                    <textarea rows="18" cols="36" class="form-control" placeholder="{{ '100010' | translate }}..." name="note" ng-model="task.note"></textarea>
                 </div>
 
             </div>
@@ -51,9 +51,9 @@
 
         <div class="addFoot">
             <span class="add-on glyphicon glyphicon-hand-right" style="color:#8B8682;cursor: pointer;;font-size: larger" ng-click="close()"></span>
-            <span style="padding-left: 20px;font-size: larger"> Create at {{task.createAt |date:'EEE d/MMM/yyyy'}}</span>
+            <span style="padding-left: 20px;font-size: larger"> {{ '100012' | translate }} {{task.createAt |date:'EEE d/MMM/yyyy'}}</span>
             <span class="onRight" style="color:#8B8682;cursor: pointer;font-weight: bold;font-size: larger" ng-click="save(task)">
-                Save
+                {{ '100011' | translate }}
             </span>
         </div>
     </div>

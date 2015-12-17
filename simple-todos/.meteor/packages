@@ -15,3 +15,5 @@ angularui:angular-ui-bootstrap
 twbs:bootstrap
 angular
 angular:angular-animate
+planettraining:angular-translate
+planettraining:angular-translate-loader-static-files

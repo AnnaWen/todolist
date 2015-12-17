@@ -33,6 +33,4 @@ angular.module('demoOne').controller('StarTaskListCtrl', ['$scope', '$stateParam
             $scope.isChange = true;
         };
 
-
-
 }]);

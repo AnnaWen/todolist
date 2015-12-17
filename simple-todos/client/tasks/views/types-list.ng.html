@@ -2,19 +2,19 @@
     <div>
         <div class="form-group pointer" ui-sref-active="active">
             <span class="glyphicon glyphicon-folder-open leftIcon"></span>
-               <a ui-sref="inbox.tasks({param:'Dropbox'})"  class="Tlink"> <span class="leftFonts">Dropbox</span></a>
+               <a ui-sref="inbox.tasks({param:'Dropbox'})"  class="Tlink"> <span class="leftFonts">{{ '100001' | translate }}</span></a>
         </div>
         <div class="form-group pointer" ui-sref-active="active">
             <span class="glyphicon glyphicon-star-empty leftIcon"> </span>
-            <a ui-sref="inbox.tasks({param:'Starred'})"  class="Tlink"> <span class="leftFonts">Starred</span></a>
+            <a ui-sref="inbox.tasks({param:'Starred'})"  class="Tlink"> <span class="leftFonts">{{ '100002' | translate }}</span></a>
         </div>
         <div class="form-group pointer" ui-sref-active="active">
             <span class="glyphicon glyphicon-list-alt leftIcon"></span>
-            <a ui-sref="inbox.totaltasks({param:'unfinished'})"  class="Tlink"><span class="leftFonts">Unfinished</span></a>
+            <a ui-sref="inbox.totaltasks({param:'unfinished'})"  class="Tlink"><span class="leftFonts">{{ '100003' | translate }}</span></a>
         </div>
         <div class="form-group pointer" ui-sref-active="active">
             <span class="glyphicon glyphicon-ok-circle leftIcon"></span>
-            <a ui-sref="inbox.totaltasks({param:'done'})" class="Tlink"><span class="leftFonts" >Done</span></a>
+            <a ui-sref="inbox.totaltasks({param:'done'})" class="Tlink"><span class="leftFonts" >{{ '100004' | translate }}</span></a>
         </div>
 
         <div ui-view="left"></div>
